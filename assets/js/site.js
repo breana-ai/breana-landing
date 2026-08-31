@@ -129,6 +129,14 @@
     });
   });
 
+  const activityTrack = document.querySelector(".activity-track");
+  const activityCycle = activityTrack?.querySelector(".activity-cycle");
+  if (activityTrack && activityCycle) {
+    const duplicate = activityCycle.cloneNode(true);
+    duplicate.setAttribute("aria-hidden", "true");
+    activityTrack.append(duplicate);
+  }
+
   const otherToggle = document.getElementById("other-task-toggle");
   const otherField = document.getElementById("other-field");
   const otherInput = document.getElementById("other-task");

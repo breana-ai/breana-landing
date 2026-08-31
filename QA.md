@@ -7,7 +7,7 @@ Validated on 2026-08-31 in desktop Chrome at 1440 × 1000 and mobile Chrome at 3
 - All 12 form inputs have programmatic labels; required name and email validation is present.
 - The conditional “Something else” field is hidden until selected.
 - Workflow scenario tabs support pointer and arrow-key navigation. On mobile, all six workflow stages can be swiped or selected with labeled 28 × 28 px step controls.
-- Mobile activity content remains visible in standard and reduced-motion modes; no content auto-advances.
+- The hero activity feed loops upward continuously on desktop and mobile, pauses on hover, and remains a static single feed in reduced-motion mode.
 - The sticky mobile CTA is hidden in the hero, visible through the middle sections, contained within the viewport, and hidden again at the waitlist.
 - Organization and WebSite JSON-LD parse successfully.
 - All local images load successfully.

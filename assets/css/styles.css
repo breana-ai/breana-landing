@@ -72,7 +72,11 @@ h1, h2, h3 { font-family: var(--display); margin: 0; }
 .eyebrow { margin: 30px 0 12px; color: var(--coral-deep); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .hero-deck { max-width: 510px; margin: 0; color: var(--body); font-size: 18px; line-height: 1.7; }
 .hero-actions { display: flex; align-items: center; gap: 24px; margin-top: 34px; }
-.activity-board { position: relative; min-height: 500px; display: grid; align-content: center; }
+.activity-board { position: relative; height: 500px; overflow: hidden; align-self: center; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%); }
+.activity-track { animation: activity-scroll 26s linear infinite; will-change: transform; }
+.activity-board:hover .activity-track { animation-play-state: paused; }
+.activity-cycle { padding-block: 34px; }
+@keyframes activity-scroll { from { transform: translateY(0); } to { transform: translateY(-50%); } }
 .activity-list { list-style: none; margin: 0 0 0 60px; padding: 0; opacity: .32; }
 .activity-list li { display: grid; grid-template-columns: 82px 1fr; gap: 20px; padding: 13px 0; border-bottom: 1px solid var(--line); color: var(--body); font-size: 14px; }
 .activity-list time { color: var(--muted); font-size: 12px; }
@@ -216,7 +220,9 @@ h1, h2, h3 { font-family: var(--display); margin: 0; }
   .hero-actions .text-link { justify-content: center; }
 
   /* Activity board: compact feed card */
-  .activity-board { order: 5; text-align: left; min-height: 0; display: block; margin-top: 26px; padding: 12px 14px 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--white); box-shadow: var(--shadow-2); }
+  .activity-board { order: 5; width: 100%; height: 254px; text-align: left; margin-top: 26px; padding: 0 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--white); box-shadow: var(--shadow-2); -webkit-mask-image: none; mask-image: none; }
+  .activity-track { animation-duration: 22s; }
+  .activity-cycle { padding-block: 12px; }
   .activity-list { margin: 0; opacity: .55; }
   .activity-list li { grid-template-columns: 58px 1fr; gap: 10px; height: 37px; align-items: center; padding: 0 4px; font-size: 12px; border-bottom: 1px solid #f3efe7; }
   .activity-list li span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -308,4 +314,6 @@ h1, h2, h3 { font-family: var(--display); margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  .activity-board { overflow: visible; height: auto; -webkit-mask-image: none; mask-image: none; }
+  .activity-cycle[aria-hidden="true"] { display: none; }
 }
