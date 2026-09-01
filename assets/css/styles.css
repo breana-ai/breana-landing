@@ -48,9 +48,9 @@ button { color: inherit; }
 
 .site-header { position: relative; z-index: 10; height: 72px; background: rgb(250 247 242 / 94%); border-bottom: 1px solid var(--line); }
 .header-inner, .footer-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 800; font-size: 21px; letter-spacing: -.035em; text-decoration: none; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 800; font-size: 23px; letter-spacing: -.035em; text-decoration: none; }
 .brand img { width: 34px; height: 27px; object-fit: contain; }
-.brand-small { font-size: 16px; }
+.brand-small { font-size: 18px; }
 .brand-small img { width: 26px; height: 21px; }
 
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border: 1px solid var(--coral); border-radius: 8px; background: var(--coral); color: var(--navy); font-weight: 700; text-decoration: none; cursor: pointer; box-shadow: var(--shadow-1); transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
@@ -170,6 +170,8 @@ h1, h2, h3 { font-family: var(--display); margin: 0; }
 
 .site-footer { height: 104px; background: var(--ivory); border-top: 1px solid var(--line); }
 .footer-links { display: flex; align-items: center; gap: 20px; color: var(--muted); font-size: 12px; }
+.footer-love { display: inline-flex; align-items: center; gap: 5px; }
+.footer-love svg { width: 13px; height: 12px; flex: 0 0 auto; fill: var(--coral); }
 .footer-links a { text-decoration: none; }
 .footer-links a:hover { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
 
@@ -201,7 +203,7 @@ h1, h2, h3 { font-family: var(--display); margin: 0; }
 
   /* App nav bar */
   .site-header { position: sticky; top: 0; z-index: 40; height: 60px; background: rgb(250 247 242 / 80%); backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); }
-  .brand { font-size: 21px; gap: 9px; }
+  .brand { font-size: 23px; gap: 9px; }
   .brand img { width: 32px; height: 26px; }
   .site-header .button-small { display: none; }
   .header-tagline { display: block; color: var(--coral-deep); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
